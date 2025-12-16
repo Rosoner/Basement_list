@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Списък МАЗЕ София</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="headerTitle" title="Click to edit">Списък Мазе - София</h1>
+      </header>
+
+      <div class="input-section">
+        <div class="input-row">
+          <input
+            type="text"
+            id="taskInput"
+            placeholder="Добави нов артикул.."
+          />
+          <input
+            type="text"
+            id="locationInput"
+            placeholder="Местоположение..."
+          />
+          <select id="categorySelect">
+            <option value="Инструменти">Инструменти</option>
+            <option value="Други">Други</option>
+            <option value="Зимнина">Зимнина</option>
+            <option value="Играчки">Играчки</option>
+            <option value="Електрически уреди">Електрически уреди</option>
+          </select>
+          <button id="addBtn">Добави</button>
+        </div>
+
+        <!-- New Search Row -->
+        <div class="search-row">
+          <input type="text" id="searchInput" placeholder="Търси артикул..." />
+          <button id="searchBtn">Търси</button>
+          <button id="clearSearchBtn">Изчисти</button>
+        </div>
+      </div>
+
+      <!-- Search Info -->
+      <div id="searchInfo" class="search-info hidden"></div>
+
+      <div id="categoriesContainer"></div>
+    </div>
+
+    <footer class="footer">
+      <p>Created by Ivan Stefanov © 2025</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
