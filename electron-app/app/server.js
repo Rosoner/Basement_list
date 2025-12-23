@@ -14,9 +14,11 @@ app.use(bodyParser.json())
 /* ------------------ SQLITE DATABASE ------------------ */
 
 // Safe database location (works in EXE)
-const dbPath = electronApp
-  ? path.join(electronApp.getPath('userData'), 'tasks.db')
-  : path.join(__dirname, 'tasks.db')
+// const dbPath = electronApp
+//   ? path.join(electronApp.getPath('userData'), 'tasks.db')
+//   : path.join(__dirname, 'tasks.db')
+
+  const dbPath = path.join(__dirname, 'tasks.db')
 
 const db = new sqlite3.Database(dbPath)
 
