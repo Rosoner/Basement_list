@@ -3,15 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
-  "author": "Ivan Stefanov",
-  "license": "MIT",
-  "scripts": {
-    "start": "electron .",
-    "build": "electron-builder"
-  },
-  "keywords": [],
   "author": "",
   "license": "ISC",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "test": "jest"
+  },
+  "keywords": [],
   "type": "commonjs",
   "dependencies": {
     "body-parser": "^2.2.1",
@@ -21,7 +20,9 @@
   },
   "devDependencies": {
     "electron": "^39.2.7",
-    "electron-builder": "^26.0.12"
+    "electron-builder": "^26.0.12",
+    "jest": "^30.2.0",
+    "jsdom": "^27.3.0"
   },
   "build": {
     "appId": "com.taskapp.sqlite",

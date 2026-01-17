@@ -4,6 +4,7 @@ export const dom = {
   categorySelect: document.getElementById('categorySelect'),
 
   addBtn: document.getElementById('addBtn'),
+  exportBtn: document.getElementById('exportBtn'),
 
   searchInput: document.getElementById('searchInput'),
   searchBtn: document.getElementById('searchBtn'),

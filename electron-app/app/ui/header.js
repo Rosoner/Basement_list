@@ -23,7 +23,7 @@ function save() {
   headerTitle.contentEditable = false
   headerTitle.classList.remove('editing')
 
-  const text = headerTitle.textContent.trim() || 'Списък Мазе - София'
+  const text = headerTitle.textContent.trim() || 'Списък'
   headerTitle.textContent = text
   localStorage.setItem('headerTitle', text)
 }
