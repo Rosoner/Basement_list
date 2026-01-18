@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   min-height: 100vh;
   padding: 20px;
@@ -19,7 +19,7 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   background: white;
-  border-radius: 16px;
+  border-radius: 0px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   overflow: hidden;
 }
@@ -406,8 +406,12 @@ td button[onclick^="cancelEdit"]:hover {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .modal-content {
@@ -501,13 +505,18 @@ td button[onclick^="cancelEdit"]:hover {
 }
 
 .export-option::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
   transition: left 0.5s ease;
 }
 
@@ -551,14 +560,84 @@ td button[onclick^="cancelEdit"]:hover {
   line-height: 1.5;
 }
 
-/* ==================== FOOTER ==================== */
+/* ==================== FOOTER - IMPROVED ==================== */
 .footer {
-  padding: 20px;
+  padding: 30px 40px;
   text-align: center;
-  background: #f8f9fa;
-  color: #6c757d;
-  font-size: 14px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
   border-radius: 0 0 16px 16px;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+}
+
+.footer p {
+  margin: 0 0 12px 0;
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0.95;
+  letter-spacing: 0.3px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  padding-bottom: 2px;
+  transition: all 0.3s ease;
+}
+
+.footer a:hover {
+  border-bottom-color: white;
+  opacity: 1;
+  transform: translateY(-1px);
+  display: inline-block;
+}
+
+.footer-credits {
+  font-size: 13px;
+  opacity: 0.8;
+  margin-top: 8px;
+}
+
+.footer-heart {
+  color: #ff6b6b;
+  animation: heartbeat 1.5s ease-in-out infinite;
+  display: inline-block;
+  font-size: 16px;
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  10%,
+  30% {
+    transform: scale(1.1);
+  }
+  20%,
+  40% {
+    transform: scale(1);
+  }
 }
 
 /* ==================== RESPONSIVE ==================== */
@@ -566,7 +645,7 @@ td button[onclick^="cancelEdit"]:hover {
   .input-row {
     grid-template-columns: 1fr 1fr;
   }
-  
+
   .input-row button {
     grid-column: 1 / -1;
   }
@@ -607,7 +686,8 @@ td button[onclick^="cancelEdit"]:hover {
     font-size: 13px;
   }
 
-  th, td {
+  th,
+  td {
     padding: 12px 10px;
   }
 
